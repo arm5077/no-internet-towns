@@ -31,7 +31,7 @@
 	
 	<div class="section half">
 		<h1 class = "line-under">Towns with worst Internet access</h1>
-		<ul class="towns" ng-repeat="town in bottom5(data)">
+		<ul class="towns">
 			<li ng-repeat="town in bottom5(data)">
 				<town></town>
 			</li>
@@ -43,8 +43,14 @@
 			<thead>
 				<tr>
 					<th>Name</th>
-					<th>Percentage of households with Internet access ()</th>
-					<th>Households without Internet access</th>
+					<th>Percentage of households with Internet access</th>
+					<th>Number of households without Internet access</th>
+					<th>Population</th>
+					<th>Median income</th>
+					<th>College degree</th>
+				</tr>
+			</thead>
+		</table>
 	</div>
 
 </body>
