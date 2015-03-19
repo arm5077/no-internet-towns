@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html ng-app="internetApp">
 
 <head>
 
@@ -8,15 +8,45 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 	
 	<!-- D3.js -->
-	<<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	
+	<!-- Numeral.js -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 	
 	<!-- Site styles -->
 	<link rel="stylesheet" href="styles.css" />
 
 </head>
 
-<body>
+<body ng-controller="internetController">
+
+	<div class="section half">
+		<h1 class = "line-under">Towns with best Internet access</h1>
+		<ul class="towns">
+			<li ng-repeat="town in top5(data)">
+				<town></town>
+			</li>
+		</ul>
+	</div>
 	
+	<div class="section half">
+		<h1 class = "line-under">Towns with worst Internet access</h1>
+		<ul class="towns" ng-repeat="town in bottom5(data)">
+			<li ng-repeat="town in bottom5(data)">
+				<town></town>
+			</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Percentage of households with Internet access ()</th>
+					<th>Households without Internet access</th>
+	</div>
+
 </body>
 
 <script type="text/javascript" src="app.js"></script>

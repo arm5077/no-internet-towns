@@ -1,0 +1,30 @@
+
+	<table class="overall">
+		<tr>
+			<td>
+				<h2 class="box" ng-class="{'green': town.percentage_with_internet >= 76, 'red': town.percentage_with_internet < 76}">{{Math.floor(town["percentage_with_internet"])}}%</h2>
+			</td>
+			<td>
+				<h2 class="light">{{town.name}}</h2>
+				<p>{{town.description}}</p>
+				<table class="stats">
+					<tr>
+						<td><strong>Population</strong></td>
+						<td>{{numeral(town.population).format('0,0')}}</td>
+					</tr>
+					<tr>
+						<td><strong>Median income</strong></td>
+						<td>{{numeral(town.median_income).format('$0,0')}}</td>
+					</tr>
+					<tr>
+						<td><strong>Percent of 25-and-up population with college degree</strong></td>
+						<td>{{town.bachelors_or_above_25_and_up}}%</td>
+					</tr>
+					<tr>
+						<td><strong>Households without Internet access</strong></td>
+						<td>{{numeral(town.no_internet_estimate).format('0,0')}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>

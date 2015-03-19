@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+html, body {
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0px 0px 10px 0px;
+}
+
+.line-under {
+	padding-bottom: 2px;
+	border-bottom: 3px solid #DaDaDa;
+}
+
+	.section {
+		margin:10px auto;
+	}
+
+.section.half {
+	width:50%;
+	max-width:700px;
+}
+
+ul.towns {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	
+	ul.towns p {
+		margin-bottom:5px;
+		font-size:13pt;
+	}
+
+	ul.towns li {
+		margin: 0 0 10px 0;
+		padding: 0 0 10px 0;
+		border-bottom: solid 1px #ddd;
+	}
+	
+	ul.towns li table {
+
+	}
+	
+	ul.towns li table td {
+		vertical-align:top;
+	}
+	
+	
+	ul.towns li table.stats {
+		width:100%;
+	}
+	
+	ul.towns li table.stats td {
+		border-bottom: 1px solid #ccc;
+		padding:5px 0px;
+	}
+	
+		ul.towns li table td:first-child {
+			padding-right:10px;
+		} 
+		
+		ul.towns li table td:last-child {
+			padding-left:10px;
+		} 
+		
+		ul.towns li table.overall > tbody > tr > td:last-child{
+			width:100%;
+		}
+		
+		ul.towns li table.stats tr:last-child td {
+			border: 0;
+		}
+	
+	ul.towns li h2 {
+		font-weight: 500;
+		font-size: 20pt;
+		margin-bottom:5px;
+	}
+	
+	ul.towns li h2.light {
+		font-weight: 300;
+	}
+	
+.box {
+		padding:10px;
+		color:white;
+	}
+	
+	.red {
+		background-color: darkred;
+	}
+	
+	.green {
+		background-color: seagreen;
+	}
+		
+h2 + p {
+	margin-top:0px;
+}
