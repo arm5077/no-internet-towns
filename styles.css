@@ -14,13 +14,28 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: 3px solid #DaDaDa;
 }
 
+.chats {
+	font-size: 16pt;
+	font-weight:400pt;
+	margin:10px 0px;
+}
+
 	.section {
-		margin:10px auto;
+		margin:50px auto;
 	}
 
 .section.half {
 	width:50%;
 	max-width:700px;
+}
+
+.section.two-thirds {
+	width:75%;
+	max-width: 850px;
+}
+
+.section p {
+	margin: 10px 0px;
 }
 
 ul.towns {
@@ -51,6 +66,8 @@ ul.towns {
 	
 	ul.towns li table.stats {
 		width:100%;
+		border-collapse:collapse;
+		border-spacing:0;
 	}
 	
 	ul.towns li table.stats td {
@@ -99,4 +116,143 @@ ul.towns {
 		
 h2 + p {
 	margin-top:0px;
+}
+
+.number {
+	text-align:right;
+}
+
+.text {
+	text-align: left;
+}
+
+table.total {
+	border-collapse:collapse;
+}
+
+table.total tr th {
+	padding-right:25px;
+	vertical-align:bottom;
+}
+
+table.total tr td {
+	padding:10px 5px;
+	border-bottom:1px solid #ccc;
+	padding-right:25px;
+}
+
+table.total tr:nth-child(2n+1) td {
+	background-color:#eee;
+}
+
+.axis path {
+	fill:none;
+	stroke: #333;
+	stroke-width:1px;
+}
+
+.dot {
+	stroke: #eee;
+	stroke-opacity:.8;
+	stroke-width:2px;
+}
+
+.tick text {
+	font-size:9pt;
+}
+
+.label {
+	font-size:10pt;
+}
+
+.popup {
+	
+	padding:10px;
+	border-radius:10px;
+	position:fixed;
+	display:none;
+	border: 1px solid lightgray;
+	background-color: white;
+	box-shadow:inset 0px -1px 1px lightgray;
+	z-index: 2;
+}
+	.popup.visible {
+		display:block;
+	}
+
+	.popup {
+	
+	padding:10px;
+	border-radius:10px;
+	position:fixed;
+	display:none;
+	border: 1px solid lightgray;
+	background-color: white;
+	box-shadow:inset 0px -1px 1px lightgray;
+	z-index: 2;
+}
+	.popup.visible {
+		display:block;
+	}
+	
+	.popup.embed {
+		margin: 10px auto;
+		width:90%;
+		padding:5%;
+		position: relative;
+	}
+	
+	.popup h3 {
+		color: black;
+		text-align:left;
+		padding:0px;
+		margin: 0px 0px 5px;
+	}
+	
+	.popup h4 {
+		font-weight:300;
+	}
+	
+.popup.float:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 15px;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -15px;
+top: -15px;
+left: 50%;
+}
+
+.popup.float:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 15px;
+border-color: lightgray transparent;
+display: block;
+width: 0;
+z-index: 0;
+margin-left: -15px;
+top: -16px;
+left: 50%;
+}
+
+#college, #poverty, #age {
+	padding: 1px 8px; 
+	background-color: #267EC1;
+	color:white;
+	opacity:.7;
+	display:inline-block;
+	margin: 2px 0px;
+}
+
+#college:hover, #poverty:hover, #age:hover {
+	opacity:1;
+	cursor:pointer;
 }

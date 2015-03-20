@@ -18,15 +18,30 @@
 
 </head>
 
-<body ng-controller="internetController">
 
+
+<body ng-controller="internetController">
+	<div class = "popup float"></div>
+	
 	<div class="section half">
-		<h1 class = "line-under">Towns with best Internet access</h1>
+		<div class="chats">
+			<p>Some towns have nothing to worry about. In the 2013 American Community Survey, 14 percent of cities and towns showed Internet connectivity rates over 90 percent.</p><p>Unsurprisingly, these include some of the wealthiest ZIP codes in the U.S.</p>
+		</div>
+	</div>
+	
+	<div class="section half">
+		<h3 class = "line-under">Towns with best Internet access</h3>
 		<ul class="towns">
 			<li ng-repeat="town in top5(data)">
 				<town></town>
 			</li>
 		</ul>
+	</div>
+	
+	<div class="section half">
+		<div class="chats">
+			<p>Others aren't so lucky. A slew of economically depressed cities posted rates hovering around 50-60 percent, even though multiple providers offer high-speed Internet service there.</p>
+		</div>
 	</div>
 	
 	<div class="section half">
@@ -38,21 +53,49 @@
 		</ul>
 	</div>
 
-	<div class="section">
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Percentage of households with Internet access</th>
-					<th>Number of households without Internet access</th>
-					<th>Population</th>
-					<th>Median income</th>
-					<th>College degree</th>
-				</tr>
-			</thead>
-		</table>
+	<div class="section half">
+		<div class="chats">
+			<p>Whether or not a town sees widespread Internet usage is strongly correlated with the percentage of its residents <span id="poverty">living in poverty</span>.</p>
+			<p>There's a lesser (but still significant) connection to <span id="college">how many residents have college degrees.</span></p>
+			<p>One factor that appears largely irrelevant? The <span id="age">median age in a community</span>. Grandma and Grandpa are on the Internet too, after all.</p>
+		</div>
+	</div>
+	
+	<div class="section two-thirds">
+		<div id="container" style="width:100%; height:400px"></div>
 	</div>
 
+	<div class="section two-thirds">
+		<div class = "source"><strong>Source:</strong> American Community Survey 2013 1-year estimates</div>
+	</div>
+
+	
+	<!--
+	<div class="section">
+		<table class="total">
+			<thead>
+				<tr>
+					<th class="text">Name</th>
+					<th class="number">Percentage of households with Internet access</th>
+					<th class="number">Number of households without Internet access</th>
+					<th class="number">Population</th>
+					<th class="number">Median income</th>
+					<th class="number">College degree</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="town in data">
+					<td class="text">{{town.name}}</td>
+					<td class="number">{{town.percentage_with_internet}}%</td>
+					<td class="number">{{numeral(town.no_internet_estimate).format("0,0")}}</td>
+					<td class="number">{{numeral(town.population).format("0,0")}}</td>
+					<td class="number">{{numeral(town.median_income).format("$0,0")}}</td>
+					<td class="number">{{numeral(town.bachelors_or_above_25_and_up).format("0,0")}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	-->
 </body>
 
 <script type="text/javascript" src="app.js"></script>

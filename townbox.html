@@ -2,11 +2,11 @@
 	<table class="overall">
 		<tr>
 			<td>
-				<h2 class="box" ng-class="{'green': town.percentage_with_internet >= 76, 'red': town.percentage_with_internet < 76}">{{Math.floor(town["percentage_with_internet"])}}%</h2>
+				<h2 class="box" ng-class="{'green': town.percentage_with_internet >= .76, 'red': town.percentage_with_internet < .76}">{{Math.floor(town["percentage_with_internet"] * 100)}}%</h2>
 			</td>
 			<td>
 				<h2 class="light">{{town.name}}</h2>
-				<p>{{town.description}}</p>
+				<!--<p>{{town.description}}</p>-->
 				<table class="stats">
 					<tr>
 						<td><strong>Population</strong></td>
@@ -18,7 +18,7 @@
 					</tr>
 					<tr>
 						<td><strong>Percent of 25-and-up population with college degree</strong></td>
-						<td>{{town.bachelors_or_above_25_and_up}}%</td>
+						<td>{{Math.floor(town.bachelors_or_above_25_and_up * 100)}}%</td>
 					</tr>
 					<tr>
 						<td><strong>Households without Internet access</strong></td>
